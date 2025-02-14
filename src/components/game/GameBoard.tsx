@@ -22,11 +22,11 @@ const categoryColors = [
 
 const GameBoard = ({
   categories = [
-    { name: "מבנה DNA", questions: [200, 400, 600, 800, 1000] },
-    { name: "תורשה", questions: [200, 400, 600, 800, 1000] },
-    { name: "מוטציות", questions: [200, 400, 600, 800, 1000] },
-    { name: "ביולוגיה של התא", questions: [200, 400, 600, 800, 1000] },
-    { name: "אבולוציה", questions: [200, 400, 600, 800, 1000] },
+    { name: "DNA ותהליכים מרכזיים", questions: [200, 400, 600, 800, 1000] },
+    { name: "אנזימי הגבלה", questions: [200, 400, 600, 800, 1000] },
+    { name: "פלסמידים", questions: [200, 400, 600, 800, 1000] },
+    { name: "PCR", questions: [200, 400, 600, 800, 1000] },
+    { name: "CRISPR", questions: [200, 400, 600, 800, 1000] },
   ],
   onCardSelect = () => {},
 }: GameBoardProps) => {
