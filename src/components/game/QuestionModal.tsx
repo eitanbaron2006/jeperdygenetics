@@ -40,9 +40,9 @@ const QuestionModal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[800px] bg-slate-900 text-white">
+      <DialogContent className="w-[95vw] max-w-[800px] bg-slate-900 text-white">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-yellow-400">
+          <DialogTitle className="text-xl sm:text-2xl font-bold text-yellow-400">
             {category} - ${points}
           </DialogTitle>
         </DialogHeader>
@@ -55,18 +55,18 @@ const QuestionModal = ({
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-2">
               <Timer className="w-6 h-6 text-blue-400" />
-              <span className="text-xl font-semibold">{timeLeft}s</span>
+              <span className="text-lg sm:text-xl font-semibold">{timeLeft}s</span>
             </div>
           </div>
 
-          <div className="text-2xl text-center mb-8">{question}</div>
+          <div className="text-lg sm:text-2xl text-center mb-8">{question}</div>
 
-          <div className="mb-6 text-lg text-gray-300 hidden" id="answer-text">
+          <div className="mb-6 text-base sm:text-lg text-gray-300 hidden" id="answer-text">
             <div className="font-bold mb-2">תשובה:</div>
             {answer}
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               variant="outline"
               size="lg"

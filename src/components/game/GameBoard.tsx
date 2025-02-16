@@ -48,16 +48,16 @@ const GameBoard = ({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-[1000px] h-[600px] bg-gradient-to-br from-slate-900/50 to-slate-950/50 p-4 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-slate-800/20 backdrop-blur-sm"
+      className="w-full max-w-[1000px] min-h-[600px] bg-gradient-to-br from-slate-900/50 to-slate-950/50 p-4 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-slate-800/20 backdrop-blur-sm overflow-hidden"
     >
       {/* Categories Header */}
-      <div className="grid grid-cols-5 gap-4 mb-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-4">
         {categories.map((category) => (
           <div
             key={category.name}
             className={`h-16 flex items-center justify-center bg-gradient-to-br ${categoryColors[categories.indexOf(category)]} rounded-xl shadow-lg border border-white/10 backdrop-blur-sm transform hover:scale-105 transition-transform duration-200`}
           >
-            <span className="text-lg font-bold text-white text-center">
+            <span className="text-sm sm:text-base lg:text-lg font-bold text-white text-center p-2">
               {category.name}
             </span>
           </div>
@@ -65,7 +65,7 @@ const GameBoard = ({
       </div>
 
       {/* Questions Grid */}
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         {categories.map((category, categoryIndex) => (
           <div key={category.name} className="flex flex-col gap-4">
             {category.questions.map((points) => {

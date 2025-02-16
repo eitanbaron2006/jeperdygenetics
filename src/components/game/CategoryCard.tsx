@@ -29,14 +29,14 @@ const CategoryCard = ({
       className="perspective-1000"
     >
       <Card
-        className={`w-[180px] h-[100px] cursor-pointer bg-gradient-to-br ${colorClass || "from-blue-600 to-blue-900"} border ${isSelected ? "border-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.3)]" : "border-white/10"} rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-200 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]`}
+        className={`w-full aspect-[16/9] cursor-pointer bg-gradient-to-br ${colorClass || "from-blue-600 to-blue-900"} border ${isSelected ? "border-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.3)]" : "border-white/10"} rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-200 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]`}
         onClick={onClick}
       >
         <div className="h-full w-full flex items-center justify-center text-center p-4">
           {isRevealed ? (
-            <span className="text-2xl font-bold text-white">{category}</span>
+            <span className="text-sm sm:text-lg lg:text-2xl font-bold text-white">{category}</span>
           ) : (
-            <span className="text-4xl font-bold bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]">
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]">
               ${points}
             </span>
           )}
